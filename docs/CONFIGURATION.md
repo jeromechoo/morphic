@@ -82,6 +82,22 @@ SEARXNG_SAFESEARCH=0  # 0: off, 1: moderate, 2: strict
 SEARXNG_LIMITER=false  # Enable to limit requests per IP
 ```
 
+### Diffbot Web Search
+
+Diffbot provides a knowledge-graph-powered web search API that can be used as another `SEARCH_API` option.
+
+1. Obtain an API token from [Diffbot](https://www.diffbot.com/).
+2. Configure the environment variables:
+
+```bash
+SEARCH_API=diffbot
+DIFFBOT_API_KEY=[YOUR_DIFFBOT_API_KEY]
+# Optional: override the default endpoint if Diffbot provides a custom deployment
+# DIFFBOT_WEB_SEARCH_URL=https://llm.diffbot.com/api/v1/web_search
+```
+
+Include and exclude domain filters, along with the requested search depth, are forwarded to Diffbot when provided so they can be honored as the API evolves.
+
 #### Advanced Search Features
 
 - `SEARXNG_DEFAULT_DEPTH`: Controls search depth
