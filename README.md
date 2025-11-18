@@ -100,6 +100,7 @@ Models are configured in `public/config/models.json`. Each model requires its co
   - [SearXNG](https://docs.searxng.org/) - Self-hosted search
   - [Exa](https://exa.ai/) - Neural search
   - [Firecrawl](https://firecrawl.dev/) - Web, news, and image search with crawling, scraping, LLM-ready extraction, and [open source](https://github.com/firecrawl/firecrawl).
+  - [Diffbot Web Search](https://www.diffbot.com/) - Knowledge graph powered web search
 
 ### Data Storage
 
@@ -142,6 +143,8 @@ Fill in the required environment variables in `.env.local`:
 # Required for Core Functionality
 OPENAI_API_KEY=     # Get from https://platform.openai.com/api-keys
 TAVILY_API_KEY=     # Get from https://app.tavily.com/home
+# Optional alternative search providers
+# DIFFBOT_API_KEY=  # Get from https://www.diffbot.com/
 ```
 
 For optional features configuration (Redis, SearXNG, etc.), see [CONFIGURATION.md](./docs/CONFIGURATION.md)
